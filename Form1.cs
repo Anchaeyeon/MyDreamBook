@@ -16,5 +16,21 @@ namespace MyDreamBook
         {
             InitializeComponent();
         }
+
+        private void 내역불러오기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormHistory form = new FormHistory();
+            form.Show();
+        }
+
+        private void 끝내기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void myDreamBook정보ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

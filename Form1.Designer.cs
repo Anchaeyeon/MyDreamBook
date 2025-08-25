@@ -147,14 +147,16 @@
             // 내역불러오기ToolStripMenuItem
             // 
             this.내역불러오기ToolStripMenuItem.Name = "내역불러오기ToolStripMenuItem";
-            this.내역불러오기ToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.내역불러오기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.내역불러오기ToolStripMenuItem.Text = "내역 불러오기";
+            this.내역불러오기ToolStripMenuItem.Click += new System.EventHandler(this.내역불러오기ToolStripMenuItem_Click);
             // 
             // 끝내기ToolStripMenuItem
             // 
             this.끝내기ToolStripMenuItem.Name = "끝내기ToolStripMenuItem";
-            this.끝내기ToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.끝내기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.끝내기ToolStripMenuItem.Text = "끝내기";
+            this.끝내기ToolStripMenuItem.Click += new System.EventHandler(this.끝내기ToolStripMenuItem_Click);
             // 
             // 도움말ToolStripMenuItem
             // 
@@ -169,6 +171,7 @@
             this.myDreamBook정보ToolStripMenuItem.Name = "myDreamBook정보ToolStripMenuItem";
             this.myDreamBook정보ToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.myDreamBook정보ToolStripMenuItem.Text = "MyDreamBook 정보";
+            this.myDreamBook정보ToolStripMenuItem.Click += new System.EventHandler(this.myDreamBook정보ToolStripMenuItem_Click);
             // 
             // tbResult
             // 
