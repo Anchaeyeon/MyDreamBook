@@ -25,12 +25,13 @@ namespace MyDreamBook
 
         private void 끝내기ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void myDreamBook정보ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormAbout form = new FormAbout();
+            form.ShowDialog();
         }
     }
 }
