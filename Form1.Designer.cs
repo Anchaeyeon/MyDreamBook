@@ -29,34 +29,81 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.파일ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.도움말ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.내역불러오기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.끝내기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.도움말ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.myDreamBook정보ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tbDream = new System.Windows.Forms.TextBox();
+            this.btnShowResult = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnShowResult);
+            this.groupBox1.Controls.Add(this.tbDream);
+            this.groupBox1.Controls.Add(this.tbName);
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(42, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(284, 368);
+            this.groupBox1.Size = new System.Drawing.Size(313, 386);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "사용자 입력";
+            // 
+            // tbName
+            // 
+            this.tbName.Location = new System.Drawing.Point(25, 212);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(188, 21);
+            this.tbName.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MyDreamBook.Properties.Resources.MyDreamBook;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(259, 141);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(23, 254);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(261, 33);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "미래에 당신이 되고 싶은 꿈 또는 지금의 직업을 적어주세요. (예: 개발자)";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 193);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(253, 12);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "당신의 이름(본명)을 적어주세요. (예: 안채연)";
             // 
             // groupBox2
             // 
             this.groupBox2.Location = new System.Drawing.Point(361, 43);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(402, 368);
+            this.groupBox2.Size = new System.Drawing.Size(402, 386);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "꿈 결과";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // menuStrip1
             // 
@@ -78,6 +125,18 @@
             this.파일ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.파일ToolStripMenuItem.Text = "파일";
             // 
+            // 내역불러오기ToolStripMenuItem
+            // 
+            this.내역불러오기ToolStripMenuItem.Name = "내역불러오기ToolStripMenuItem";
+            this.내역불러오기ToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.내역불러오기ToolStripMenuItem.Text = "내역 불러오기";
+            // 
+            // 끝내기ToolStripMenuItem
+            // 
+            this.끝내기ToolStripMenuItem.Name = "끝내기ToolStripMenuItem";
+            this.끝내기ToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.끝내기ToolStripMenuItem.Text = "끝내기";
+            // 
             // 도움말ToolStripMenuItem
             // 
             this.도움말ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -86,23 +145,27 @@
             this.도움말ToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.도움말ToolStripMenuItem.Text = "도움말";
             // 
-            // 내역불러오기ToolStripMenuItem
-            // 
-            this.내역불러오기ToolStripMenuItem.Name = "내역불러오기ToolStripMenuItem";
-            this.내역불러오기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.내역불러오기ToolStripMenuItem.Text = "내역 불러오기";
-            // 
-            // 끝내기ToolStripMenuItem
-            // 
-            this.끝내기ToolStripMenuItem.Name = "끝내기ToolStripMenuItem";
-            this.끝내기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.끝내기ToolStripMenuItem.Text = "끝내기";
-            // 
             // myDreamBook정보ToolStripMenuItem
             // 
             this.myDreamBook정보ToolStripMenuItem.Name = "myDreamBook정보ToolStripMenuItem";
             this.myDreamBook정보ToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.myDreamBook정보ToolStripMenuItem.Text = "MyDreamBook 정보";
+            // 
+            // tbDream
+            // 
+            this.tbDream.Location = new System.Drawing.Point(25, 290);
+            this.tbDream.Name = "tbDream";
+            this.tbDream.Size = new System.Drawing.Size(188, 21);
+            this.tbDream.TabIndex = 4;
+            // 
+            // btnShowResult
+            // 
+            this.btnShowResult.Location = new System.Drawing.Point(25, 329);
+            this.btnShowResult.Name = "btnShowResult";
+            this.btnShowResult.Size = new System.Drawing.Size(259, 35);
+            this.btnShowResult.TabIndex = 5;
+            this.btnShowResult.Text = "결과 보러가기";
+            this.btnShowResult.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -115,6 +178,9 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "MyDreamBook";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -132,6 +198,12 @@
         private System.Windows.Forms.ToolStripMenuItem 끝내기ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 도움말ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem myDreamBook정보ToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.TextBox tbDream;
+        private System.Windows.Forms.Button btnShowResult;
     }
 }
 
