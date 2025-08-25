@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnShowResult = new System.Windows.Forms.Button();
+            this.tbDream = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,10 +42,10 @@
             this.끝내기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.도움말ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.myDreamBook정보ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tbDream = new System.Windows.Forms.TextBox();
-            this.btnShowResult = new System.Windows.Forms.Button();
+            this.tbResult = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +63,22 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "사용자 입력";
+            // 
+            // btnShowResult
+            // 
+            this.btnShowResult.Location = new System.Drawing.Point(25, 329);
+            this.btnShowResult.Name = "btnShowResult";
+            this.btnShowResult.Size = new System.Drawing.Size(259, 35);
+            this.btnShowResult.TabIndex = 5;
+            this.btnShowResult.Text = "결과 보러가기";
+            this.btnShowResult.UseVisualStyleBackColor = true;
+            // 
+            // tbDream
+            // 
+            this.tbDream.Location = new System.Drawing.Point(25, 290);
+            this.tbDream.Name = "tbDream";
+            this.tbDream.Size = new System.Drawing.Size(188, 21);
+            this.tbDream.TabIndex = 4;
             // 
             // tbName
             // 
@@ -98,6 +116,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.tbResult);
             this.groupBox2.Location = new System.Drawing.Point(361, 43);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(402, 386);
@@ -151,21 +170,14 @@
             this.myDreamBook정보ToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.myDreamBook정보ToolStripMenuItem.Text = "MyDreamBook 정보";
             // 
-            // tbDream
+            // tbResult
             // 
-            this.tbDream.Location = new System.Drawing.Point(25, 290);
-            this.tbDream.Name = "tbDream";
-            this.tbDream.Size = new System.Drawing.Size(188, 21);
-            this.tbDream.TabIndex = 4;
-            // 
-            // btnShowResult
-            // 
-            this.btnShowResult.Location = new System.Drawing.Point(25, 329);
-            this.btnShowResult.Name = "btnShowResult";
-            this.btnShowResult.Size = new System.Drawing.Size(259, 35);
-            this.btnShowResult.TabIndex = 5;
-            this.btnShowResult.Text = "결과 보러가기";
-            this.btnShowResult.UseVisualStyleBackColor = true;
+            this.tbResult.Location = new System.Drawing.Point(21, 34);
+            this.tbResult.Multiline = true;
+            this.tbResult.Name = "tbResult";
+            this.tbResult.ReadOnly = true;
+            this.tbResult.Size = new System.Drawing.Size(364, 329);
+            this.tbResult.TabIndex = 0;
             // 
             // Form1
             // 
@@ -175,12 +187,16 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "MyDreamBook";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -204,6 +220,7 @@
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.TextBox tbDream;
         private System.Windows.Forms.Button btnShowResult;
+        private System.Windows.Forms.TextBox tbResult;
     }
 }
 
