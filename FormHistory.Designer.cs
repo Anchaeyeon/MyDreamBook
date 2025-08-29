@@ -68,6 +68,7 @@
             this.MaximizeBox = false;
             this.Name = "FormHistory";
             this.Text = "FormHistory";
+            this.Load += new System.EventHandler(this.FormHistory_Load);
             this.ResumeLayout(false);
 
         }

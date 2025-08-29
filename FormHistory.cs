@@ -12,9 +12,15 @@ namespace MyDreamBook
 {
     public partial class FormHistory : Form
     {
+        List<string> history;
         public FormHistory()
         {
             InitializeComponent();
+        }
+
+        private void FormHistory_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
