@@ -80,9 +80,11 @@ namespace MyDreamBook
             string dream = tbDream.Text;
             string result = GetFortune();
             
-            tbResult.Text = "나의 이름: " + name + Environment.NewLine + "나의 꿈: " + dream + Environment.NewLine + result;
+            tbResult.Text = "나의 이름: " + name + Environment.NewLine +
+                "나의 꿈: " + dream + Environment.NewLine +
+                result;
 
-            SaveHistory($"나의 이름: {name} | 나의 꿈: {dream} - {result}");
+            SaveHistory($"{name} | {dream} - {result}");
         }
 
         private void SaveHistory(string history)
@@ -100,6 +102,19 @@ namespace MyDreamBook
             {
                 MessageBox.Show($"알 수 없는 오류가 발생했습니다.\n{ex.Message}", "알 수 없는 오류");
             }
+        }
+
+        internal void LoadHistory(string history)
+        {
+            string name = history.Split('|')[0];
+            tbName.Text = name;
+
+            string dream = history.Split('|')[1].Split('-')[0];
+            tbDream.Text = dream;
+
+            string message = history.Split('-')[1];
+
+            tbResult.Text = "나의 이름: " + name + Environment.NewLine + "나의 꿈:" + dream + Environment.NewLine + message;
         }
     }
 }
