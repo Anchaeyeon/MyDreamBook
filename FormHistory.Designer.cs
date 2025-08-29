@@ -41,6 +41,7 @@
             this.btnRefresh.TabIndex = 1;
             this.btnRefresh.Text = "내역 다시 불러오기";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // lbHistory
             // 
@@ -68,7 +69,6 @@
             this.MaximizeBox = false;
             this.Name = "FormHistory";
             this.Text = "FormHistory";
-            this.Load += new System.EventHandler(this.FormHistory_Load);
             this.ResumeLayout(false);
 
         }
