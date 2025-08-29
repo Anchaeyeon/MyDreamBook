@@ -73,5 +73,14 @@ namespace MyDreamBook
             FormAbout form = new FormAbout();
             form.ShowDialog();
         }
+
+        private void btnShowResult_Click(object sender, EventArgs e)
+        {
+            string name = tbName.Text;
+            string dream = tbDream.Text;
+            string result = GetFortune();
+            
+            tbResult.Text = "나의 이름: " + name + Environment.NewLine + "나의 꿈: " + dream + Environment.NewLine + result;
+        }
     }
 }
