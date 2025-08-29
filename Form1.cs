@@ -56,13 +56,6 @@ namespace MyDreamBook
             }
         }
 
-        private string GetFortune()
-        {
-            Random random = new Random();
-            int index = random.Next(0, results.Count);
-            return results[index];
-        }
-
         private void 끝내기ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -74,6 +67,13 @@ namespace MyDreamBook
             form.ShowDialog();
         }
 
+        private string GetFortune()
+        {
+            Random random = new Random();
+            int index = random.Next(0, results.Count);
+            return results[index];
+        }
+
         private void btnShowResult_Click(object sender, EventArgs e)
         {
             string name = tbName.Text;
@@ -81,6 +81,25 @@ namespace MyDreamBook
             string result = GetFortune();
             
             tbResult.Text = "나의 이름: " + name + Environment.NewLine + "나의 꿈: " + dream + Environment.NewLine + result;
+
+            SaveHistory($"나의 이름: {name} | 나의 꿈: {dream} - {result}");
+        }
+
+        private void SaveHistory(string history)
+        {
+            try
+            {
+                string filename = "mydreambook_history.csv";
+                File.AppendAllText(filename, history + Environment.NewLine);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                MessageBox.Show($"권한이 없습니다.\n{ex.Message}", "권한 오류");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"알 수 없는 오류가 발생했습니다.\n{ex.Message}", "알 수 없는 오류");
+            }
         }
     }
 }
